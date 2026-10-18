@@ -1,0 +1,58 @@
+{
+  "case_id": "CASE-DRAINER-8921",
+  "victim_address": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+  "suspect_address": "0x0948564949f059caeb7546513470ffbd4a6e8df8",
+  "loss_amount": 14.75,
+  "token": "ETH",
+  "category": "PHISHING_DRAINER",
+  "tx_hash": "0x9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b",
+  "incident_date": "2026-10-17T14:30:00Z",
+  "description": "Victim interacted with malicious Permit2 phishing site posing as an official governance token airdrop. Wallet swept within 15 seconds.",
+  "transactions": [
+    {
+      "tx_hash": "0x9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b",
+      "from": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+      "to": "0x0948564949f059caeb7546513470ffbd4a6e8df8",
+      "amount": 14.75,
+      "token": "ETH",
+      "timestamp": 1729175400,
+      "block_number": 19482100
+    },
+    {
+      "tx_hash": "0x11223344556677889900aabbccddeeff11223344556677889900aabbccddeeff",
+      "from": "0x0948564949f059caeb7546513470ffbd4a6e8df8",
+      "to": "0x35653606f7df160deeaec21dd51a1936c507a2a0",
+      "amount": 10.50,
+      "token": "ETH",
+      "timestamp": 1729175520,
+      "block_number": 19482110
+    },
+    {
+      "tx_hash": "0x223344556677889900aabbccddeeff11223344556677889900aabbccddeeff11",
+      "from": "0x0948564949f059caeb7546513470ffbd4a6e8df8",
+      "to": "0x892a4ec998394982394829384923849238492384",
+      "amount": 4.25,
+      "token": "ETH",
+      "timestamp": 1729175540,
+      "block_number": 19482112
+    },
+    {
+      "tx_hash": "0x3344556677889900aabbccddeeff11223344556677889900aabbccddeeff1122",
+      "from": "0x35653606f7df160deeaec21dd51a1936c507a2a0",
+      "to": "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b",
+      "amount": 10.00,
+      "token": "ETH",
+      "timestamp": 1729175800,
+      "block_number": 19482130
+    },
+    {
+      "tx_hash": "0x44556677889900aabbccddeeff11223344556677889900aabbccddeeff112233",
+      "from": "0x892a4ec998394982394829384923849238492384",
+      "to": "0x28c6c06298d514db089934071355e5743bf21d60",
+      "amount": 4.10,
+      "token": "ETH",
+      "timestamp": 1729176100,
+      "block_number": 19482155
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", "Inter", sans-serif;
+  --color-ink: #070b18;
+  --color-navy: #0b1224;
+  --color-panel: #10182c;
+  --color-cyan: #22d3ee;
+  --color-violet: #8b5cf6;
+  --color-amber: #f59e0b;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #050814;
+  color: #e8eefc;
+  font-family: var(--font-sans);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e2a44 transparent;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(16, 24, 44, 0.86), rgba(11, 18, 36, 0.72));
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.04), 0 18px 40px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16px);
+}
+
+.radar-sweep {
+  background: radial-gradient(circle at center, rgba(34, 211, 238, 0.16), transparent 62%);
+}
+
+@keyframes sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sweep-arm {
+  animation: sweep 8s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.live-dot {
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+@media print {
+  aside,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body {
+    background: white;
+    color: #111;
+  }
+}

@@ -1,0 +1,11 @@
+from .auth import router as auth_router
+from .fleet import router as fleet_router
+from .components import router as components_router
+from .telemetry import router as telemetry_router
+from .predictive import router as predictive_router
+from .work_orders import router as work_orders_router
+from .inventory import router as inventory_router
+from .schedules import router as schedules_router
+from .alerts import router as alerts_router
+from .insights import router as insights_router
+from .audit import router as audit_router

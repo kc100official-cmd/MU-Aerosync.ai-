@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainForensix AI | Automated Multi-Hop Crypto Forensic Pipeline & Blockchain Anchor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <div class="brand-icon">⚡</div>
+                <div>
+                    <h1>ChainForensix AI</h1>
+                    <p>Automated Multi-Hop Crypto Forensic Pipeline & Immutable Blockchain Anchor</p>
+                </div>
+            </div>
+            <div class="system-status">
+                <div class="status-pill" id="cppStatusPill">
+                    <span class="status-dot active"></span> C++ Engine: Active (x64)
+                </div>
+                <div class="status-pill" id="bchainStatusPill">
+                    <span class="status-dot active"></span> Blockchain: Initializing...
+                </div>
+                <div class="status-pill">
+                    <span class="status-dot active"></span> AI Attribution: v2.0
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1-Click Hackathon Presets / Demo bar -->
+        <div class="quick-bar">
+            <div style="font-size: 0.85rem; font-weight: 600; color: #94a3b8;">
+                QUICK DEMO PRESETS:
+            </div>
+            <div class="quick-presets">
+                <button class="quick-btn" onclick="loadSample('drainer')">🎯 Sample 1: Permit2 Phishing Drainer</button>
+                <button class="quick-btn" onclick="loadSample('ransomware')">🔒 Sample 2: Multi-Hop Ransomware Extortion</button>
+            </div>
+        </div>
+
+        <div class="grid-layout">
+            <!-- Left Column: Ingestion & Incident Management -->
+            <div class="col-left">
+                <!-- Victim Report Ingestion Form -->
+                <div class="card">
+                    <div class="card-title">
+                        <h3><span>📥</span> Victim Incident Ingestion</h3>
+                        <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">MULTI-CHAIN READY</span>
+                    </div>
+
+                    <form id="ingestForm" onsubmit="event.preventDefault(); executeTrace();">
+                        <div class="form-group">
+                            <label>Victim Wallet Address</label>
+                            <input type="text" id="victimAddress" class="form-control" placeholder="0x... or bc1..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Suspect / Attacker Wallet Address</label>
+                            <input type="text" id="suspectAddress" class="form-control" placeholder="0x... or bc1..." required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Stolen Amount</label>
+                                <input type="number" step="0.0001" id="lossAmount" class="form-control" placeholder="14.5" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Asset Token</label>
+                                <select id="tokenSelect" class="form-control">
+                                    <option value="ETH">ETH (Ethereum)</option>
+                                    <option value="USDT">USDT (Tether)</option>
+                                    <option value="USDC">USDC (USD Coin)</option>
+                                    <option value="BTC">BTC (Bitcoin)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Incident Category</label>
+                                <select id="categorySelect" class="form-control">
+                                    <option value="PHISHING_DRAINER">Phishing / Permit2 Drainer</option>
+                                    <option value="RANSOMWARE_EXTORTION">Ransomware Extortion</option>
+                                    <option value="BRIDGE_EXPLOIT">DeFi Bridge Exploit</option>
+                                    <option value="EXIT_SCAM">Exit Scam / Rugpull</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Initial Transaction Hash</label>
+                                <input type="text" id="txHash" class="form-control" placeholder="0x...">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Incident Details / Threat Intel Notes</label>
+                            <textarea id="incidentNotes" class="form-control" rows="2" placeholder="Describe victim interaction, phishing payload, or ransom note..."></textarea>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="autoAnchorCheckbox" checked>
+                            <label for="autoAnchorCheckbox">Anchor cryptographic evidence to blockchain smart contract</label>
+                        </div>
+
+                        <button type="submit" id="btnTrace" class="btn-primary">
+                            ⚡ INGEST & EXECUTE NATIVE C++ FORENSIC TRACE
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Incident History -->
+                <div class="card">
+                    <div class="card-title">
+                        <h3><span>🗂️</span> Investigated Incidents</h3>
+                        <span style="font-size:0.75rem; color:var(--text-muted);">LIVE REPOSITORY</span>
+                    </div>
+                    <div id="casesList">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: AI Analytics, Visual Graph & Blockchain Seal -->
+            <div class="col-right">
+                <!-- Attribution & AI Risk Header -->
+                <div class="attribution-banner">
+                    <div>
+                        <div class="threat-name" id="threatActorName">Scanning Graph...</div>
+                        <div class="threat-sub" id="threatActorSub">AI Threat Intelligence attribution in progress</div>
+                    </div>
+                    <div class="score-badge-container">
+                        <div class="score-num" id="riskScoreNum">--</div>
+                        <span class="severity-pill" id="severityPill">PENDING</span>
+                    </div>
+                </div>
+
+                <!-- Forensic Metrics Row -->
+                <div class="metric-grid">
+                    <div class="metric-box">
+                        <div class="metric-val" id="metricNodes">0</div>
+                        <div class="metric-label">Traced Nodes</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-val" id="metricHops">0</div>
+                        <div class="metric-label">Multi-Hop Depth</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-val" id="metricPeel">NONE</div>
+                        <div class="metric-label">Peeling Chain</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-val" id="metricOfframps">0</div>
+                        <div class="metric-label">CEX Offramps</div>
+                    </div>
+                </div>
+
+                <!-- Interactive Multi-Hop Graph Canvas -->
+                <div class="card" style="padding: 1rem;">
+                    <div class="card-title" style="margin-bottom: 0.5rem;">
+                        <h3><span>🕸️</span> Multi-Hop Transaction Graph (C++ Traversal Engine)</h3>
+                        <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">BFS / Centrality / Velocity Flow</span>
+                    </div>
+                    
+                    <div class="canvas-wrapper">
+                        <canvas id="forensicCanvas"></canvas>
+                        <div class="graph-legend">
+                            <div class="legend-item"><span class="legend-dot" style="background:#ef4444;"></span> Suspect Seed</div>
+                            <div class="legend-item"><span class="legend-dot" style="background:#3b82f6;"></span> Hop Intermediary</div>
+                            <div class="legend-item"><span class="legend-dot" style="background:#06b6d4;"></span> Peeling Node</div>
+                            <div class="legend-item"><span class="legend-dot" style="background:#a855f7;"></span> Mixer / Anonymizer</div>
+                            <div class="legend-item"><span class="legend-dot" style="background:#f59e0b;"></span> Exchange Off-Ramp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Directives and Law Enforcement Actions -->
+                <div class="card">
+                    <div class="card-title">
+                        <h3><span>🚨</span> Rapid Cyber-Incident Attribution & Freeze Directives</h3>
+                    </div>
+                    <div class="directives-list" id="directivesList">
+                        <!-- Directives injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Immutable Blockchain Evidence Anchor Seal -->
+                <div class="card anchor-seal-card">
+                    <div class="anchor-header">
+                        <div style="font-weight:700; font-size:1.05rem; display:flex; align-items:center; gap:8px;">
+                            <span>⛓️</span> Immutable Blockchain Smart Contract Evidence Anchor
+                        </div>
+                        <div class="verified-badge" id="anchorBadge">
+                            ✓ CONFIRMED ON-CHAIN
+                        </div>
+                    </div>
+
+                    <div class="anchor-details">
+                        <div class="anchor-row">
+                            <span class="anchor-label">Case Identifier:</span>
+                            <span class="anchor-val" id="sealCaseId">--</span>
+                        </div>
+                        <div class="anchor-row">
+                            <span class="anchor-label">Dossier Cryptographic Hash (SHA-256):</span>
+                            <span class="anchor-val" id="sealReportHash">--</span>
+                        </div>
+                        <div class="anchor-row">
+                            <span class="anchor-label">Decentralized IPFS CID:</span>
+                            <span class="anchor-val" id="sealIpfsCid">--</span>
+                        </div>
+                        <div class="anchor-row">
+                            <span class="anchor-label">Anchored Block Height:</span>
+                            <span class="anchor-val" id="sealBlockNum">--</span>
+                        </div>
+                        <div class="anchor-row">
+                            <span class="anchor-label">Smart Contract Address:</span>
+                            <span class="anchor-val" id="sealContract">--</span>
+                        </div>
+                        <div class="anchor-row">
+                            <span class="anchor-label">Anchor Transaction Hash:</span>
+                            <span class="anchor-val" id="sealTxHash">--</span>
+                        </div>
+                    </div>
+
+                    <div class="actions-row">
+                        <button class="btn-secondary" onclick="verifyOnChain()">
+                            🔍 Verify On-Chain Integrity
+                        </button>
+                        <button class="btn-secondary" onclick="exportJSON()">
+                            📄 Export Forensic Dossier JSON
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

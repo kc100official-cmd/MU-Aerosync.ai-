@@ -1,0 +1,58 @@
+{
+  "case_id": "CASE-RANSOM-4109",
+  "victim_address": "0x53d284357ec70cE289D6D64134DfAc8E511c8a3D",
+  "suspect_address": "0x12bcf39818816ab8753239248238492039482938",
+  "loss_amount": 32.50,
+  "token": "ETH",
+  "category": "RANSOMWARE_EXTORTION",
+  "tx_hash": "0x778899aabbccddeeff0011223344556677889900aabbccddeeff001122334455",
+  "incident_date": "2026-10-16T09:15:00Z",
+  "description": "Enterprise healthcare provider ransomware extortion payment. Assets layered across rapid peeling hops targeting centralized exchanges.",
+  "transactions": [
+    {
+      "tx_hash": "0x778899aabbccddeeff0011223344556677889900aabbccddeeff001122334455",
+      "from": "0x53d284357ec70cE289D6D64134DfAc8E511c8a3D",
+      "to": "0x12bcf39818816ab8753239248238492039482938",
+      "amount": 32.50,
+      "token": "ETH",
+      "timestamp": 1729070100,
+      "block_number": 19478000
+    },
+    {
+      "tx_hash": "0x8899aabbccddeeff0011223344556677889900aabbccddeeff00112233445566",
+      "from": "0x12bcf39818816ab8753239248238492039482938",
+      "to": "0x9832749283749823749823749823749823749823",
+      "amount": 30.00,
+      "token": "ETH",
+      "timestamp": 1729070400,
+      "block_number": 19478025
+    },
+    {
+      "tx_hash": "0x99aabbccddeeff0011223344556677889900aabbccddeeff0011223344556677",
+      "from": "0x12bcf39818816ab8753239248238492039482938",
+      "to": "0x7483927492837498237498237498237498237498",
+      "amount": 2.50,
+      "token": "ETH",
+      "timestamp": 1729070420,
+      "block_number": 19478027
+    },
+    {
+      "tx_hash": "0xaabbccddeeff0011223344556677889900aabbccddeeff001122334455667788",
+      "from": "0x9832749283749823749823749823749823749823",
+      "to": "0x2faf487a4414fe30e230961afea6568b3c1d8de7",
+      "amount": 15.00,
+      "token": "ETH",
+      "timestamp": 1729071000,
+      "block_number": 19478070
+    },
+    {
+      "tx_hash": "0xbbccddeeff0011223344556677889900aabbccddeeff00112233445566778899",
+      "from": "0x9832749283749823749823749823749823749823",
+      "to": "0x70faa28a6b8d6829a4b1e649d26ec9a2a39ba413",
+      "amount": 14.80,
+      "token": "ETH",
+      "timestamp": 1729071200,
+      "block_number": 19478085
+    }
+  ]
+}

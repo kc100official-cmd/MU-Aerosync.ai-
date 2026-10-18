@@ -1,0 +1,28 @@
+# Compiled C++ Binaries and Objects
+*.exe
+*.o
+*.obj
+*.so
+*.dylib
+engine/graph_tracer
+engine/graph_tracer.exe
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+venv/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test & coverage
+.pytest_cache/
+.coverage
+htmlcov/
